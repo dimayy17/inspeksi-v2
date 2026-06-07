@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form Tindak Lanjut — Close Temuan</title>
+<title>Form Tindak Lanjut - Close Temuan</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 :root{
-  --bg:#f1f5f9;--surface:#ffffff;--surface2:#f8fafc;
-  --border:#e2e8f0;--border2:#cbd5e1;
-  --accent:#2563eb;--accent-light:#eff6ff;
-  --ok:#16a34a;--ok-light:#f0fdf4;
+  --bg:#f0fdf4;--surface:#ffffff;--surface2:#f8faf8;
+  --border:#d1e7dd;--border2:#a3cfbb;
+  --accent:#16a34a;--accent-light:#dcfce7;--accent-dark:#15803d;
+  --ok:#16a34a;--ok-light:#dcfce7;
   --ng:#dc2626;--ng-light:#fef2f2;
-  --warn:#d97706;--warn-light:#fffbeb;
-  --text:#0f172a;--text2:#475569;--text3:#94a3b8;
+  --warn:#d97706;--warn-light:#fef3c7;
+  --text:#0f172a;--text2:#475569;--text3:#64748b;
   --shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.05);
   --shadow-md:0 4px 6px rgba(0,0,0,.07),0 2px 4px rgba(0,0,0,.05);
   --r:10px;--f:'Inter',system-ui,sans-serif;
@@ -22,70 +22,57 @@
 body{background:var(--bg);color:var(--text);font-family:var(--f);min-height:100vh;padding-bottom:80px;}
 .header{background:var(--surface);border-bottom:1px solid var(--border);padding:0 20px;position:sticky;top:0;z-index:100;box-shadow:var(--shadow);}
 .header-inner{max-width:680px;margin:0 auto;height:64px;display:flex;align-items:center;gap:12px;}
-.logo{width:36px;height:36px;background:var(--ok);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.logo{width:36px;height:36px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .logo svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
 .header-sub{font-size:11px;color:var(--text3);letter-spacing:.04em;text-transform:uppercase;font-weight:500;}
 .header-title{font-size:16px;font-weight:600;color:var(--text);line-height:1.2;}
 .wrap{max-width:680px;margin:0 auto;padding:20px 16px 0;}
 .sec-title{font-size:12px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
 .sec-title::after{content:'';flex:1;height:1px;background:var(--border);}
-.sec-num{width:20px;height:20px;background:var(--ok);border-radius:50%;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sec-num{width:22px;height:22px;background:var(--accent);border-radius:50%;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;margin-bottom:16px;}
 .field{padding:14px 16px;border-bottom:1px solid var(--border);transition:background .15s;}
 .field:last-child{border-bottom:none;}
 .field:focus-within{background:var(--accent-light);}
 label{display:block;font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
 label .req{color:var(--ng);margin-left:2px;}
-input[type=text],input[type=date],select,textarea{
-  width:100%;background:var(--surface2);border:1.5px solid var(--border);
-  border-radius:7px;color:var(--text);font-family:var(--f);font-size:14px;
-  padding:9px 12px;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;
-}
-input:focus,select:focus,textarea:focus{border-color:var(--ok);box-shadow:0 0 0 3px rgba(22,163,74,.1);}
+input[type=text],input[type=date],select,textarea{width:100%;background:var(--surface2);border:1.5px solid var(--border);border-radius:7px;color:var(--text);font-family:var(--f);font-size:14px;padding:9px 12px;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(22,163,74,.12);}
 textarea{resize:vertical;min-height:80px;line-height:1.6;}
-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px;}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px;}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 @media(max-width:480px){.frow{grid-template-columns:1fr;}}
-
-/* ASSET GRID */
 .asset-list{display:flex;flex-direction:column;gap:8px;}
 .asset-card{background:var(--surface2);border:1.5px solid var(--border);border-radius:8px;padding:12px 14px;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:space-between;}
-.asset-card:hover{border-color:var(--ok);background:var(--ok-light);}
-.asset-card.selected{border-color:var(--ok);background:var(--ok-light);}
+.asset-card:hover{border-color:var(--accent);background:var(--accent-light);}
+.asset-card.selected{border-color:var(--accent);background:var(--accent-light);box-shadow:0 0 0 2px rgba(22,163,74,.15);}
 .asset-id{font-size:14px;font-weight:600;color:var(--text);}
 .asset-meta{font-size:12px;color:var(--text3);margin-top:2px;}
 .open-badge{font-size:11px;font-weight:600;background:var(--ng-light);color:var(--ng);border:1px solid #fca5a5;padding:3px 10px;border-radius:20px;white-space:nowrap;}
-
-/* TEMUAN LIST */
 .temuan-list{display:flex;flex-direction:column;gap:8px;}
 .temuan-card{background:var(--surface2);border:1.5px solid var(--border);border-radius:8px;padding:12px 14px;cursor:pointer;transition:all .2s;}
-.temuan-card:hover{border-color:var(--warn);}
-.temuan-card.selected{border-color:var(--warn);background:var(--warn-light);}
+.temuan-card:hover{border-color:var(--warn);background:var(--warn-light);}
+.temuan-card.selected{border-color:var(--warn);background:var(--warn-light);box-shadow:0 0 0 2px rgba(217,119,6,.15);}
 .tc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:6px;}
 .tc-id{font-size:12px;font-weight:600;font-family:monospace;color:var(--text);}
 .tc-desc{font-size:13px;color:var(--text);margin-bottom:4px;line-height:1.4;}
 .tc-meta{font-size:11px;color:var(--text3);}
 .badge{display:inline-flex;align-items:center;padding:2px 9px;border-radius:20px;font-size:10px;font-weight:600;}
-.b-low{background:var(--ok-light);color:var(--ok);border:1px solid #86efac;}
-.b-medium{background:var(--warn-light);color:var(--warn);border:1px solid #fcd34d;}
+.b-low{background:#dcfce7;color:#16a34a;border:1px solid #86efac;}
+.b-medium{background:#fef3c7;color:#d97706;border:1px solid #fcd34d;}
 .b-high{background:#fff7ed;color:#ea580c;border:1px solid #fed7aa;}
-.b-critical{background:var(--ng-light);color:var(--ng);border:1px solid #fca5a5;}
-.b-aging-ok{background:var(--ok-light);color:var(--ok);}
-.b-aging-warn{background:var(--warn-light);color:var(--warn);}
-.b-aging-danger{background:var(--ng-light);color:var(--ng);}
-
-/* DETAIL PANEL */
+.b-critical{background:#fef2f2;color:#dc2626;border:1px solid #fca5a5;}
+.b-aging-ok{background:#dcfce7;color:#16a34a;}
+.b-aging-warn{background:#fef3c7;color:#d97706;}
+.b-aging-danger{background:#fef2f2;color:#dc2626;}
 .detail-panel{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:14px;margin-top:8px;}
 .dp-row{display:flex;gap:10px;margin-bottom:8px;align-items:flex-start;}
 .dp-row:last-child{margin-bottom:0;}
 .dp-lbl{font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;min-width:90px;flex-shrink:0;padding-top:2px;}
 .dp-val{font-size:13px;color:var(--text);line-height:1.5;}
-.foto-chips{display:flex;flex-wrap:wrap;gap:6px;}
-.foto-chip{font-size:11px;color:var(--accent);background:var(--accent-light);border:1px solid #bfdbfe;padding:3px 10px;border-radius:20px;text-decoration:none;font-weight:500;}
-
-/* FOTO UPLOAD */
+.foto-chip{font-size:11px;color:var(--accent);background:var(--accent-light);border:1px solid var(--border2);padding:3px 10px;border-radius:20px;text-decoration:none;font-weight:500;display:inline-block;margin:2px;}
 .foto-zone{border:2px dashed var(--border2);border-radius:8px;padding:20px 16px;text-align:center;cursor:pointer;transition:all .2s;position:relative;background:var(--surface2);}
-.foto-zone:hover{border-color:var(--ok);background:var(--ok-light);}
+.foto-zone:hover{border-color:var(--accent);background:var(--accent-light);}
 .foto-zone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
 .foto-preview{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
 .fp-item{position:relative;}
@@ -95,16 +82,13 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 .foto-status.uploading{color:var(--warn);}
 .foto-status.done{color:var(--ok);}
 .foto-status.error{color:var(--ng);}
-
 .state-msg{text-align:center;padding:20px;font-size:13px;color:var(--text3);background:var(--surface2);border:1px dashed var(--border2);border-radius:8px;}
 .btn-refresh{width:100%;padding:10px;background:var(--surface);color:var(--text3);border:1.5px solid var(--border2);border-radius:7px;font-family:var(--f);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;margin-top:8px;}
-.btn-refresh:hover{border-color:var(--ok);color:var(--ok);}
-
+.btn-refresh:hover{border-color:var(--accent);color:var(--accent);}
 .btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;border:none;border-radius:8px;font-family:var(--f);font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;}
-.btn-close{background:var(--ok);color:#fff;}
-.btn-close:hover{background:#15803d;transform:translateY(-1px);box-shadow:var(--shadow-md);}
+.btn-close{background:var(--accent);color:#fff;}
+.btn-close:hover{background:var(--accent-dark);transform:translateY(-1px);box-shadow:var(--shadow-md);}
 .btn-close:disabled{background:var(--border);color:var(--text3);cursor:not-allowed;transform:none;box-shadow:none;}
-
 .ov{display:none;position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:200;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
 .ov.show{display:flex;}
 .ov-card{background:var(--surface);border-radius:16px;padding:36px 28px;text-align:center;max-width:300px;width:90%;box-shadow:0 20px 40px rgba(0,0,0,.15);animation:popIn .3s cubic-bezier(.34,1.56,.64,1);}
@@ -114,11 +98,12 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 .ov-title.ok{color:var(--ok);}
 .ov-title.err{color:var(--ng);}
 .ov-msg{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:20px;white-space:pre-line;}
-.btn-reset{padding:11px 28px;background:var(--ok);color:#fff;border:none;border-radius:8px;font-family:var(--f);font-size:14px;font-weight:600;cursor:pointer;}
+.btn-reset{padding:11px 28px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:var(--f);font-size:14px;font-weight:600;cursor:pointer;}
 .sp{width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .5s linear infinite;display:none;}
 @keyframes spin{to{transform:rotate(360deg)}}
-
-[style*="display:none"]{display:none!important;}
+.pic-info{background:var(--accent-light);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;margin-bottom:16px;font-size:13px;color:var(--accent-dark);display:none;align-items:center;gap:8px;}
+.pic-info.show{display:flex;}
+.pic-info strong{font-weight:600;}
 </style>
 </head>
 <body>
@@ -129,7 +114,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
       <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
     </div>
     <div>
-      <div class="header-sub">PIC Area · Close Temuan</div>
+      <div class="header-sub">PIC Area - Close Temuan</div>
       <div class="header-title">Form Tindak Lanjut</div>
     </div>
   </div>
@@ -137,74 +122,68 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 
 <div class="wrap">
 
-  <!-- SEC 1 -->
-  <div class="sec-title"><span class="sec-num">1</span>Identitas PIC Area</div>
+  <!-- SEC 1: IDENTITAS PIC -->
+  <div class="sec-title"><span class="sec-num">1</span>Identitas PIC</div>
   <div class="card">
-    <div class="field frow">
-      <div>
-        <label>Nama PIC Area <span class="req">*</span></label>
-        <input type="text" id="namaPIC" placeholder="Nama lengkap..." required>
-      </div>
-      <div>
-        <label>Tanggal Tindak Lanjut <span class="req">*</span></label>
-        <input type="date" id="tglClose" required>
-      </div>
-    </div>
     <div class="field">
-      <label>Area / Pit <span class="req">*</span></label>
-      <select id="areaPIC" required onchange="onAreaChange()">
-        <option value="">— Pilih Pit Area —</option>
-        <option value="KGB">KGB</option>
-        <option value="GRB">GRB</option>
+      <label>Pilih Nama PIC <span class="req">*</span></label>
+      <select id="picSelect" required onchange="onPicSelect()">
+        <option value="">- Pilih Nama PIC -</option>
       </select>
     </div>
     <div class="field">
-      <label>Sub Area <span class="req">*</span></label>
-      <select id="subAreaPIC" required>
-        <option value="">— Pilih Sub Area —</option>
-      </select>
+      <label>Tanggal Tindak Lanjut <span class="req">*</span></label>
+      <input type="date" id="tglClose" required>
     </div>
   </div>
 
-  <!-- SEC 2 -->
-  <div class="sec-title"><span class="sec-num">2</span>Pilih Aset</div>
-  <div class="card">
-    <div class="field">
-      <label>No Asset dengan Temuan Open</label>
-      <div class="asset-list" id="assetList">
-        <div class="state-msg">⏳ Memuat daftar aset...</div>
+  <div class="pic-info" id="picInfo">
+    Area: <strong id="picAreaLabel">-</strong>
+  </div>
+
+  <!-- SEC 2: PILIH ASET -->
+  <div id="secAset" style="display:none;">
+    <div class="sec-title"><span class="sec-num">2</span>Pilih Aset</div>
+    <div class="card">
+      <div class="field">
+        <label>No Asset dengan Temuan Open</label>
+        <div class="asset-list" id="assetList">
+          <div class="state-msg">[...] Memuat daftar aset...</div>
+        </div>
+        <button class="btn-refresh" onclick="loadTemuan()">Refresh Daftar</button>
       </div>
-      <button class="btn-refresh" onclick="loadTemuan()">🔄 Refresh Daftar</button>
     </div>
   </div>
 
-  <!-- SEC 3 -->
+  <!-- SEC 3: PILIH TEMUAN -->
   <div id="secTemuan" style="display:none;">
     <div class="sec-title"><span class="sec-num">3</span><span id="secTemuanTitle">Temuan Open</span></div>
     <div class="card">
       <div class="field">
-        <label>Pilih Temuan</label>
+        <label>Pilih Temuan yang Akan Diselesaikan</label>
         <div class="temuan-list" id="temuanList"></div>
       </div>
       <div class="field" id="detailField" style="display:none;">
-        <label>Detail Temuan Terpilih</label>
+        <label>Detail Temuan</label>
         <div class="detail-panel">
-          <div class="dp-row"><span class="dp-lbl">Tanggal</span><span class="dp-val" id="dpTgl">—</span></div>
-          <div class="dp-row"><span class="dp-lbl">Inspektor</span><span class="dp-val" id="dpIns">—</span></div>
-          <div class="dp-row"><span class="dp-lbl">Risiko</span><span class="dp-val" id="dpRisiko">—</span></div>
-          <div class="dp-row"><span class="dp-lbl">Usia</span><span class="dp-val" id="dpAging">—</span></div>
-          <div class="dp-row"><span class="dp-lbl">Item NG</span><span class="dp-val" id="dpNG">—</span></div>
-          <div class="dp-row"><span class="dp-lbl">Deskripsi</span><span class="dp-val" id="dpDesc">—</span></div>
-          <div class="dp-row"><span class="dp-lbl">Rekomendasi</span><span class="dp-val" id="dpRek">—</span></div>
-          <div class="dp-row" id="dpFotoRow" style="display:none;"><span class="dp-lbl">Foto</span><span class="dp-val" id="dpFoto"></span></div>
+          <div class="dp-row"><span class="dp-lbl">Tanggal</span><span class="dp-val" id="dpTgl">-</span></div>
+          <div class="dp-row"><span class="dp-lbl">Inspektor</span><span class="dp-val" id="dpIns">-</span></div>
+          <div class="dp-row"><span class="dp-lbl">Jenis Tools</span><span class="dp-val" id="dpTools">-</span></div>
+          <div class="dp-row"><span class="dp-lbl">Risiko</span><span class="dp-val" id="dpRisiko">-</span></div>
+          <div class="dp-row"><span class="dp-lbl">Usia Temuan</span><span class="dp-val" id="dpAging">-</span></div>
+          <div class="dp-row"><span class="dp-lbl">Item NG</span><span class="dp-val" id="dpNG">-</span></div>
+          <div class="dp-row"><span class="dp-lbl">Deskripsi</span><span class="dp-val" id="dpDesc">-</span></div>
+          <div class="dp-row"><span class="dp-lbl">Rekomendasi</span><span class="dp-val" id="dpRek">-</span></div>
+          <div class="dp-row"><span class="dp-lbl">Status Aset</span><span class="dp-val" id="dpStatus">-</span></div>
+          <div class="dp-row" id="dpFotoRow" style="display:none;"><span class="dp-lbl">Foto Awal</span><span class="dp-val" id="dpFoto"></span></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- SEC 4 -->
+  <!-- SEC 4: TINDAKAN -->
   <div id="secTindakan" style="display:none;">
-    <div class="sec-title"><span class="sec-num">4</span>Detail Tindakan</div>
+    <div class="sec-title"><span class="sec-num">4</span>Tindakan Perbaikan</div>
     <div class="card">
       <div class="field">
         <label>Tindakan yang Dilakukan <span class="req">*</span></label>
@@ -213,18 +192,18 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
       <div class="field">
         <label>Hasil Verifikasi</label>
         <select id="hasilVerif">
-          <option value="Sudah Diperbaiki">✅ Sudah Diperbaiki — Aset kembali normal</option>
-          <option value="Diperbaiki Sebagian">🔧 Diperbaiki Sebagian — Perlu tindak lanjut lagi</option>
-          <option value="Diganti">🔄 Diganti — Aset / komponen diganti baru</option>
+          <option value="Sudah Diperbaiki">Sudah Diperbaiki - Aset kembali normal</option>
+          <option value="Diperbaiki Sebagian">Diperbaiki Sebagian - Perlu tindak lanjut lagi</option>
+          <option value="Diganti">Diganti - Aset / komponen diganti baru</option>
         </select>
       </div>
       <div class="field">
         <label>Foto Bukti Perbaikan <span class="req">*</span></label>
         <div class="foto-zone">
           <input type="file" id="fotoInputClose" accept="image/*" multiple onchange="handleFotoClose(this)">
-          <div style="font-size:28px;margin-bottom:6px;">📷</div>
+          <div style="font-size:16px;margin-bottom:6px;font-weight:600;color:var(--text3);">[ FOTO BUKTI ]</div>
           <p style="font-size:13px;color:var(--text3);">Foto bukti perbaikan wajib dilampirkan</p>
-          <span style="font-size:11px;color:var(--ok);font-weight:600;">Wajib min. 1 foto · Maks 3 foto</span>
+          <span style="font-size:11px;color:var(--accent);font-weight:600;">Min. 1 foto - Maks 3 foto</span>
         </div>
         <div class="foto-preview" id="fotoPreviewClose"></div>
         <div class="foto-status" id="fotoStatusClose"></div>
@@ -237,7 +216,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 
     <button class="btn btn-close" id="btnClose" onclick="submitClose()">
       <span class="sp" id="sp"></span>
-      <span id="btnTxt">Close Temuan ✓</span>
+      <span id="btnTxt">Close Temuan</span>
     </button>
   </div>
 
@@ -245,7 +224,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 
 <div class="ov" id="ov">
   <div class="ov-card">
-    <div class="ov-icon" id="ovI">✅</div>
+    <div class="ov-icon" id="ovI">OK</div>
     <div class="ov-title ok" id="ovT">Temuan Ditutup!</div>
     <div class="ov-msg" id="ovM">Status berhasil diubah ke Closed.</div>
     <button class="btn-reset" onclick="resetForm()">Close Temuan Lain</button>
@@ -253,243 +232,336 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 </div>
 
 <script>
-const SCRIPT_URL="https://script.google.com/macros/s/AKfycbzg9WdRsxChRgO24z45jm4WpiuT43pqLa7UiU80o_Duc1WFXDwvSwWK45QLfm5WBtXl9w/exec";
-let allTemuan=[],selectedTemuan=null,fotoFilesClose=[],fotoLinksClose=[];
+var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzg9WdRsxChRgO24z45jm4WpiuT43pqLa7UiU80o_Duc1WFXDwvSwWK45QLfm5WBtXl9w/exec";
 
+var PIC_LIST = [
+  {nama:"PIC KGB - WS CIA",            pit:"KGB", sub:"WS CIA"},
+  {nama:"PIC KGB - Office CIA",         pit:"KGB", sub:"Office CIA"},
+  {nama:"PIC KGB - PCR",               pit:"KGB", sub:"PCR"},
+  {nama:"PIC KGB - Area TU",           pit:"KGB", sub:"Area TU"},
+  {nama:"PIC KGB - SSB",               pit:"KGB", sub:"SSB"},
+  {nama:"PIC KGB - Bay CP",            pit:"KGB", sub:"Bay CP"},
+  {nama:"PIC KGB - Epiroc",            pit:"KGB", sub:"Epiroc"},
+  {nama:"PIC KGB - Pit Stop Selatan",  pit:"KGB", sub:"Pit Stop Selatan"},
+  {nama:"PIC GRB - Iglo HE",           pit:"GRB", sub:"Iglo HE"},
+  {nama:"PIC GRB - Iglo Track Support Eq", pit:"GRB", sub:"Iglo Track Support Eq"},
+  {nama:"PIC GRB - Area TU",           pit:"GRB", sub:"Area TU"},
+  {nama:"PIC GRB - SSB",               pit:"GRB", sub:"SSB"},
+  {nama:"PIC GRB - Bay CP",            pit:"GRB", sub:"Bay CP"},
+  {nama:"PIC GRB - Epiroc",            pit:"GRB", sub:"Epiroc"},
+  {nama:"PIC GRB - Pit Stop Selatan",  pit:"GRB", sub:"Pit Stop Selatan"}
+];
 
-const SUB_AREAS = {
-  "KGB": ["WS CIA","Office CIA","PCR","Area TU","SSB","Bay CP","Epiroc","Pit Stop Selatan"],
-  "GRB": ["Iglo HE","Iglo Track & Support Eq","Area TU","SSB","Bay CP","Epiroc","Pit Stop Selatan"],
-};
+var allTemuan = [];
+var selectedPic = null;
+var selectedTemuan = null;
+var fotoFilesClose = [];
 
-function onAreaChange() {
-  const area = document.getElementById('areaPIC').value;
-  const sub = document.getElementById('subAreaPIC');
-  sub.innerHTML = '<option value=""> -  Pilih Sub Area  - </option>';
-  if (area && SUB_AREAS[area]) {
-    SUB_AREAS[area].forEach(s => {
-      const opt = document.createElement('option');
-      opt.value = s; opt.textContent = s;
-      sub.appendChild(opt);
-    });
+document.addEventListener('DOMContentLoaded', function(){
+  document.getElementById('tglClose').value = new Date().toISOString().split('T')[0];
+  var sel = document.getElementById('picSelect');
+  for (var i = 0; i < PIC_LIST.length; i++) {
+    var opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = PIC_LIST[i].nama;
+    sel.appendChild(opt);
   }
-  filterByArea();
-}
-
-document.addEventListener('DOMContentLoaded',()=>{
-  document.getElementById('tglClose').value=new Date().toISOString().split('T')[0];
   loadTemuan();
 });
 
-async function loadTemuan(){
-  document.getElementById('assetList').innerHTML='<div class="state-msg">[...] Memuat daftar aset...</div>';
-  try{
-    const res=await fetch(SCRIPT_URL+'?action=getOpenTemuan',{method:'GET',redirect:'follow'});
-    const text=await res.text();
-    let data;
-    try{data=JSON.parse(text);}
-    catch(e){const m=text.match(/\{.*\}/s);data=m?JSON.parse(m[0]):{temuan:[]};}
-    allTemuan=data.temuan||[];
-    renderAssets(allTemuan);
-  }catch(e){loadViaScript();}
+function onPicSelect(){
+  var idx = document.getElementById('picSelect').value;
+  if (idx === '') {
+    selectedPic = null;
+    document.getElementById('picInfo').classList.remove('show');
+    document.getElementById('secAset').style.display = 'none';
+    document.getElementById('secTemuan').style.display = 'none';
+    document.getElementById('secTindakan').style.display = 'none';
+    return;
+  }
+  selectedPic = PIC_LIST[parseInt(idx)];
+  document.getElementById('picAreaLabel').textContent = selectedPic.pit + ' - ' + selectedPic.sub;
+  document.getElementById('picInfo').classList.add('show');
+  document.getElementById('secAset').style.display = 'block';
+  document.getElementById('secTemuan').style.display = 'none';
+  document.getElementById('secTindakan').style.display = 'none';
+  selectedTemuan = null;
+  filterAndRenderAssets();
+}
+
+function loadTemuan(){
+  document.getElementById('assetList').innerHTML = '<div class="state-msg">[...] Memuat daftar aset...</div>';
+  fetch(SCRIPT_URL + '?action=getOpenTemuan', {method:'GET', redirect:'follow'})
+    .then(function(res){ return res.text(); })
+    .then(function(text){
+      var data;
+      try { data = JSON.parse(text); }
+      catch(e) { var m = text.match(/\{.*\}/s); data = m ? JSON.parse(m[0]) : {temuan:[]}; }
+      allTemuan = data.temuan || [];
+      if (selectedPic) filterAndRenderAssets();
+    })
+    .catch(function(){ loadViaScript(); });
 }
 
 function loadViaScript(){
-  window._cb=function(data){
-    allTemuan=data.temuan||[];
-    renderAssets(allTemuan);
-    document.getElementById('_js')&&document.getElementById('_js').remove();
+  window._cb = function(data){
+    allTemuan = data.temuan || [];
+    if (selectedPic) filterAndRenderAssets();
+    var s = document.getElementById('_js');
+    if (s) s.remove();
   };
-  const s=document.createElement('script');s.id='_js';
-  s.src=SCRIPT_URL+'?action=getOpenTemuan&callback=_cb';
-  s.onerror=()=>{document.getElementById('assetList').innerHTML='<div class="state-msg">[!] Gagal memuat. Deploy ulang Apps Script lalu klik Refresh.</div>';};
+  var s = document.createElement('script');
+  s.id = '_js';
+  s.src = SCRIPT_URL + '?action=getOpenTemuan&callback=_cb';
+  s.onerror = function(){
+    document.getElementById('assetList').innerHTML = '<div class="state-msg">[!] Gagal memuat data.</div>';
+  };
   document.head.appendChild(s);
 }
 
-function filterByArea(){
-  const area=document.getElementById('areaPIC').value;
-  const pool=area?allTemuan.filter(t=>t.pit_area===area):allTemuan;
-  renderAssets(pool);
-  selectedTemuan=null;
-  document.getElementById('secTemuan').style.display='none';
-  document.getElementById('secTindakan').style.display='none';
-}
-
-function renderAssets(temuan){
-  const el=document.getElementById('assetList');
-  if(!temuan.length){el.innerHTML='<div class="state-msg">[OK] Tidak ada temuan Open saat ini.</div>';return;}
-  const map={};
-  temuan.forEach(t=>{
-    const k=String(t.no_asset);
-    if(!map[k])map[k]={no_asset:k,jenis_tools:t.jenis_tools,pit_area:t.pit_area,count:0};
+function filterAndRenderAssets(){
+  if (!selectedPic) return;
+  var filtered = [];
+  for (var i = 0; i < allTemuan.length; i++) {
+    var t = allTemuan[i];
+    if (String(t.pit_area) === selectedPic.pit) {
+      filtered.push(t);
+    }
+  }
+  var el = document.getElementById('assetList');
+  if (filtered.length === 0) {
+    el.innerHTML = '<div class="state-msg">Tidak ada temuan Open di area ' + selectedPic.pit + ' - ' + selectedPic.sub + '</div>';
+    return;
+  }
+  var map = {};
+  for (var j = 0; j < filtered.length; j++) {
+    var t2 = filtered[j];
+    var k = String(t2.no_asset);
+    if (!map[k]) map[k] = {no_asset:k, jenis_tools:t2.jenis_tools, pit_area:t2.pit_area, sub_area:t2.sub_area || '', count:0};
     map[k].count++;
-  });
-  el.innerHTML=Object.values(map).map(a=>`
-    <div class="asset-card" id="ac-${a.no_asset}" onclick="selectAsset('${a.no_asset}')">
-      <div>
-        <div class="asset-id">${a.no_asset}</div>
-        <div class="asset-meta">${a.jenis_tools} - ${a.pit_area}</div>
-      </div>
-      <span class="open-badge">${a.count} Open</span>
-    </div>`).join('');
+  }
+  var keys = Object.keys(map);
+  var html = '';
+  for (var m = 0; m < keys.length; m++) {
+    var a = map[keys[m]];
+    html += '<div class="asset-card" id="ac-' + a.no_asset + '" onclick="selectAsset(\'' + a.no_asset + '\')">';
+    html += '<div><div class="asset-id">' + a.no_asset + '</div>';
+    html += '<div class="asset-meta">' + a.jenis_tools + ' - ' + a.pit_area + '</div></div>';
+    html += '<span class="open-badge">' + a.count + ' Open</span></div>';
+  }
+  el.innerHTML = html;
 }
 
 function selectAsset(noAsset){
-  document.querySelectorAll('.asset-card').forEach(c=>c.classList.remove('selected'));
-  const el=document.getElementById('ac-'+noAsset);
-  if(el)el.classList.add('selected');
-  const area=document.getElementById('areaPIC').value;
-  const pool=area?allTemuan.filter(t=>t.pit_area===area):allTemuan;
-  const items=pool.filter(t=>String(t.no_asset)===String(noAsset));
-  document.getElementById('secTemuanTitle').textContent=`Temuan Open  -  ${noAsset}`;
-  const list=document.getElementById('temuanList');
-  if(!items.length){list.innerHTML='<div class="state-msg">[!] Tidak ada temuan Open untuk aset ini.</div>';}
-  else{
-    list.innerHTML=items.map(t=>{
-      const days=Math.floor((new Date()-new Date(t.tanggal))/(1000*60*60*24));
-      const ac=days<=7?'b-aging-ok':days<=30?'b-aging-warn':'b-aging-danger';
-      const rc='b-'+(t.risiko||'medium').toLowerCase();
-      return`<div class="temuan-card" id="tc-${t.temuan_id}" onclick="selectTemuan('${t.temuan_id}')">
-        <div class="tc-head">
-          <span class="tc-id">${t.temuan_id}</span>
-          <div style="display:flex;gap:6px;">
-            <span class="badge ${rc}">${t.risiko||'-'}</span>
-            <span class="badge ${ac}">${days} hari</span>
-          </div>
-        </div>
-        <div class="tc-desc">${t.deskripsi||'(Tidak ada deskripsi)'}</div>
-        <div class="tc-meta">Item NG: ${t.item_tidak||'-'} - ${t.tanggal}</div>
-      </div>`;
-    }).join('');
+  var cards = document.querySelectorAll('.asset-card');
+  for (var i = 0; i < cards.length; i++) cards[i].classList.remove('selected');
+  var el = document.getElementById('ac-' + noAsset);
+  if (el) el.classList.add('selected');
+
+  var filtered = [];
+  for (var j = 0; j < allTemuan.length; j++) {
+    var t = allTemuan[j];
+    if (selectedPic && String(t.pit_area) === selectedPic.pit && String(t.no_asset) === String(noAsset)) {
+      filtered.push(t);
+    }
   }
-  document.getElementById('secTemuan').style.display='block';
-  document.getElementById('detailField').style.display='none';
-  document.getElementById('secTindakan').style.display='none';
-  selectedTemuan=null;
-  setTimeout(()=>document.getElementById('secTemuan').scrollIntoView({behavior:'smooth',block:'start'}),100);
+
+  document.getElementById('secTemuanTitle').textContent = 'Temuan Open - ' + noAsset;
+  var list = document.getElementById('temuanList');
+
+  if (filtered.length === 0) {
+    list.innerHTML = '<div class="state-msg">[!] Tidak ada temuan Open untuk aset ini.</div>';
+  } else {
+    var html = '';
+    for (var k = 0; k < filtered.length; k++) {
+      var t2 = filtered[k];
+      var days = Math.floor((new Date() - new Date(t2.tanggal)) / (1000*60*60*24));
+      var ac = days <= 7 ? 'b-aging-ok' : (days <= 30 ? 'b-aging-warn' : 'b-aging-danger');
+      var rc = 'b-' + (t2.risiko || 'medium').toLowerCase();
+      html += '<div class="temuan-card" id="tc-' + t2.temuan_id + '" onclick="selectTemuan(\'' + t2.temuan_id + '\')">';
+      html += '<div class="tc-head"><span class="tc-id">' + t2.temuan_id + '</span>';
+      html += '<div style="display:flex;gap:6px;">';
+      html += '<span class="badge ' + rc + '">' + (t2.risiko || '-') + '</span>';
+      html += '<span class="badge ' + ac + '">' + days + ' hari</span></div></div>';
+      html += '<div class="tc-desc">' + (t2.deskripsi || '(Tidak ada deskripsi)') + '</div>';
+      html += '<div class="tc-meta">Item NG: ' + (t2.item_tidak || '-') + ' - ' + t2.tanggal + '</div></div>';
+    }
+    list.innerHTML = html;
+  }
+
+  document.getElementById('secTemuan').style.display = 'block';
+  document.getElementById('detailField').style.display = 'none';
+  document.getElementById('secTindakan').style.display = 'none';
+  selectedTemuan = null;
+  setTimeout(function(){ document.getElementById('secTemuan').scrollIntoView({behavior:'smooth',block:'start'}); }, 100);
 }
 
 function selectTemuan(id){
-  const t=allTemuan.find(x=>x.temuan_id===id);
-  if(!t)return;
-  selectedTemuan=t;
-  document.querySelectorAll('.temuan-card').forEach(c=>c.classList.remove('selected'));
-  const el=document.getElementById('tc-'+id);
-  if(el)el.classList.add('selected');
-  const days=Math.floor((new Date()-new Date(t.tanggal))/(1000*60*60*24));
-  const ac=days<=7?'b-aging-ok':days<=30?'b-aging-warn':'b-aging-danger';
-  const rc='b-'+(t.risiko||'medium').toLowerCase();
-  document.getElementById('dpTgl').textContent=t.tanggal;
-  document.getElementById('dpIns').textContent=t.nama_inspektor||'-';
-  document.getElementById('dpNG').textContent=t.item_tidak||'-';
-  document.getElementById('dpDesc').textContent=t.deskripsi||'-';
-  document.getElementById('dpRek').textContent=t.rekomendasi||'-';
-  document.getElementById('dpRisiko').innerHTML=`<span class="badge ${rc}">${t.risiko||'-'}</span>`;
-  document.getElementById('dpAging').innerHTML=`<span class="badge ${ac}">${days} hari</span>`;
-  if(t.foto_links&&t.foto_links.trim()){
-    const links=t.foto_links.split(',').map(l=>l.trim()).filter(Boolean);
-    document.getElementById('dpFoto').innerHTML=`<div class="foto-chips">${links.map((l,i)=>`<a href="${l}" target="_blank" class="foto-chip">[foto] Foto ${i+1}</a>`).join('')}</div>`;
-    document.getElementById('dpFotoRow').style.display='flex';
-  } else document.getElementById('dpFotoRow').style.display='none';
-  document.getElementById('detailField').style.display='block';
-  document.getElementById('secTindakan').style.display='block';
-  setTimeout(()=>document.getElementById('secTindakan').scrollIntoView({behavior:'smooth',block:'start'}),100);
+  var t = null;
+  for (var i = 0; i < allTemuan.length; i++) {
+    if (allTemuan[i].temuan_id === id) { t = allTemuan[i]; break; }
+  }
+  if (!t) return;
+  selectedTemuan = t;
+
+  var cards = document.querySelectorAll('.temuan-card');
+  for (var j = 0; j < cards.length; j++) cards[j].classList.remove('selected');
+  var el = document.getElementById('tc-' + id);
+  if (el) el.classList.add('selected');
+
+  var days = Math.floor((new Date() - new Date(t.tanggal)) / (1000*60*60*24));
+  var ac = days <= 7 ? 'b-aging-ok' : (days <= 30 ? 'b-aging-warn' : 'b-aging-danger');
+  var rc = 'b-' + (t.risiko || 'medium').toLowerCase();
+
+  document.getElementById('dpTgl').textContent = t.tanggal;
+  document.getElementById('dpIns').textContent = t.nama_inspektor || '-';
+  document.getElementById('dpTools').textContent = t.jenis_tools || '-';
+  document.getElementById('dpNG').textContent = t.item_tidak || '-';
+  document.getElementById('dpDesc').textContent = t.deskripsi || '-';
+  document.getElementById('dpRek').textContent = t.rekomendasi || '-';
+  document.getElementById('dpStatus').textContent = t.status_aset || '-';
+  document.getElementById('dpRisiko').innerHTML = '<span class="badge ' + rc + '">' + (t.risiko || '-') + '</span>';
+  document.getElementById('dpAging').innerHTML = '<span class="badge ' + ac + '">' + days + ' hari</span>';
+
+  if (t.foto_links && String(t.foto_links).trim() !== '') {
+    var links = String(t.foto_links).split(',');
+    var fhtml = '';
+    for (var f = 0; f < links.length; f++) {
+      var lnk = links[f].trim();
+      if (lnk) fhtml += '<a href="' + lnk + '" target="_blank" class="foto-chip">[foto] Foto ' + (f+1) + '</a>';
+    }
+    document.getElementById('dpFoto').innerHTML = fhtml;
+    document.getElementById('dpFotoRow').style.display = 'flex';
+  } else {
+    document.getElementById('dpFotoRow').style.display = 'none';
+  }
+
+  document.getElementById('detailField').style.display = 'block';
+  document.getElementById('secTindakan').style.display = 'block';
+  setTimeout(function(){ document.getElementById('secTindakan').scrollIntoView({behavior:'smooth',block:'start'}); }, 100);
 }
 
 function handleFotoClose(input){
-  const files=Array.from(input.files).slice(0,3);
-  fotoFilesClose=files;
-  const preview=document.getElementById('fotoPreviewClose');
-  preview.innerHTML='';
-  files.forEach((f,i)=>{
-    const r=new FileReader();
-    r.onload=e=>{preview.innerHTML+=`<div class="fp-item"><img src="${e.target.result}"><button class="fp-del" onclick="removeFotoClose(${i})">x</button></div>`;};
-    r.readAsDataURL(f);
-  });
-  document.getElementById('fotoStatusClose').textContent=files.length+' foto dipilih';
-  document.getElementById('fotoStatusClose').className='foto-status';
+  var files = [];
+  for (var i = 0; i < Math.min(input.files.length, 3); i++) files.push(input.files[i]);
+  fotoFilesClose = files;
+  var preview = document.getElementById('fotoPreviewClose');
+  preview.innerHTML = '';
+  for (var j = 0; j < files.length; j++) {
+    (function(idx, file){
+      var reader = new FileReader();
+      reader.onload = function(e){
+        preview.innerHTML += '<div class="fp-item"><img src="' + e.target.result + '"><button class="fp-del" onclick="removeFotoClose(' + idx + ')">x</button></div>';
+      };
+      reader.readAsDataURL(file);
+    })(j, files[j]);
+  }
+  document.getElementById('fotoStatusClose').textContent = files.length + ' foto dipilih';
+  document.getElementById('fotoStatusClose').className = 'foto-status';
 }
 
 function removeFotoClose(idx){
-  fotoFilesClose.splice(idx,1);
-  if(!fotoFilesClose.length){
-    document.getElementById('fotoPreviewClose').innerHTML='';
-    document.getElementById('fotoStatusClose').textContent='';
-    document.getElementById('fotoInputClose').value='';
-  } else handleFotoClose({files:fotoFilesClose});
+  fotoFilesClose.splice(idx, 1);
+  if (fotoFilesClose.length === 0) {
+    document.getElementById('fotoPreviewClose').innerHTML = '';
+    document.getElementById('fotoStatusClose').textContent = '';
+    document.getElementById('fotoInputClose').value = '';
+  } else {
+    handleFotoClose({files: fotoFilesClose});
+  }
 }
 
 function fileToBase64(file){
-  return new Promise((res,rej)=>{
-    const r=new FileReader();
-    r.onload=e=>res({base64:e.target.result.split(',')[1],mimeType:file.type,name:file.name});
-    r.onerror=()=>rej(new Error('Gagal membaca file'));
+  return new Promise(function(res, rej){
+    var r = new FileReader();
+    r.onload = function(e){ res({base64: e.target.result.split(',')[1], mimeType: file.type, name: file.name}); };
+    r.onerror = function(){ rej(new Error('Gagal membaca file')); };
     r.readAsDataURL(file);
   });
 }
 
-async function prepFotoClose(){
-  if(!fotoFilesClose.length)return[];
-  const st=document.getElementById('fotoStatusClose');
-  st.textContent='Menyiapkan foto...';st.className='foto-status uploading';
-  const filesData=[];
-  for(const f of fotoFilesClose)filesData.push(await fileToBase64(f));
-  st.textContent=fotoFilesClose.length+' foto siap dikirim v';st.className='foto-status done';
-  return filesData;
+function prepFotoClose(){
+  return new Promise(function(resolve){
+    if (fotoFilesClose.length === 0) { resolve([]); return; }
+    var st = document.getElementById('fotoStatusClose');
+    st.textContent = 'Menyiapkan foto...'; st.className = 'foto-status uploading';
+    var promises = [];
+    for (var i = 0; i < fotoFilesClose.length; i++) promises.push(fileToBase64(fotoFilesClose[i]));
+    Promise.all(promises).then(function(data){
+      st.textContent = fotoFilesClose.length + ' foto siap dikirim'; st.className = 'foto-status done';
+      resolve(data);
+    });
+  });
 }
 
-async function submitClose(){
-  const nama=document.getElementById('namaPIC').value.trim();
-  const area=document.getElementById('areaPIC').value;
-  const tgl=document.getElementById('tglClose').value;
-  const tindakan=document.getElementById('tindakan').value.trim();
-  if(!nama||!area||!tgl){alert('Lengkapi identitas PIC Area terlebih dahulu.');return;}
-  if(!selectedTemuan){alert('Pilih temuan yang akan di-close terlebih dahulu.');return;}
-  if(!tindakan){alert('Isi tindakan yang sudah dilakukan.');return;}
-  if(fotoFilesClose.length===0){alert('Foto bukti perbaikan wajib dilampirkan minimal 1 foto.');return;}
-  const btn=document.getElementById('btnClose');
-  btn.disabled=true;
-  document.getElementById('sp').style.display='block';
-  document.getElementById('btnTxt').textContent='Menyimpan...';
-  const filesData=await prepFotoClose();
-  const payload={
-    tbl:'close_temuan',temuan_id:selectedTemuan.temuan_id,
-    sub_area:document.getElementById('subAreaPIC').value,
-    nama_pic:nama,area_pic:area,tgl_close:tgl,
-    tindakan:tindakan,hasil_verif:document.getElementById('hasilVerif').value,
-    catatan_close:document.getElementById('catatanClose').value.trim(),
-    foto_files_close:filesData,foto_links_close:'',
-    status_temuan:'Closed',timestamp:new Date().toISOString(),
-  };
-  try{
-    await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-    showOv(true);
-  }catch(e){showOv(false);}
-  btn.disabled=false;
-  document.getElementById('sp').style.display='none';
-  document.getElementById('btnTxt').textContent='Close Temuan v';
+function submitClose(){
+  var tgl = document.getElementById('tglClose').value;
+  var tindakan = document.getElementById('tindakan').value.trim();
+
+  if (!selectedPic) { alert('Pilih nama PIC terlebih dahulu.'); return; }
+  if (!tgl) { alert('Tanggal tindak lanjut wajib diisi.'); return; }
+  if (!selectedTemuan) { alert('Pilih temuan yang akan di-close.'); return; }
+  if (!tindakan) { alert('Isi tindakan yang sudah dilakukan.'); return; }
+  if (fotoFilesClose.length === 0) { alert('Foto bukti perbaikan wajib dilampirkan minimal 1 foto.'); return; }
+
+  var btn = document.getElementById('btnClose');
+  btn.disabled = true;
+  document.getElementById('sp').style.display = 'block';
+  document.getElementById('btnTxt').textContent = 'Menyimpan...';
+
+  prepFotoClose().then(function(filesData){
+    var payload = {
+      tbl: 'close_temuan',
+      temuan_id: selectedTemuan.temuan_id,
+      nama_pic: selectedPic.nama,
+      area_pic: selectedPic.pit + ' - ' + selectedPic.sub,
+      tgl_close: tgl,
+      tindakan: tindakan,
+      hasil_verif: document.getElementById('hasilVerif').value,
+      catatan_close: document.getElementById('catatanClose').value.trim(),
+      foto_files_close: filesData,
+      foto_links_close: '',
+      status_temuan: 'Closed',
+      timestamp: new Date().toISOString()
+    };
+
+    fetch(SCRIPT_URL, {method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)})
+      .then(function(){ showOv(true); })
+      .catch(function(){ showOv(false); });
+
+    btn.disabled = false;
+    document.getElementById('sp').style.display = 'none';
+    document.getElementById('btnTxt').textContent = 'Close Temuan';
+  });
 }
 
 function showOv(ok){
-  document.getElementById('ovI').textContent=ok?'[OK]':'[X]';
-  document.getElementById('ovT').textContent=ok?'Temuan Ditutup!':'Gagal Menyimpan';
-  document.getElementById('ovT').className='ov-title '+(ok?'ok':'err');
-  document.getElementById('ovM').textContent=ok?`${selectedTemuan?.temuan_id} berhasil di-close.\ntbl_temuan sudah diperbarui.`:'Cek koneksi internet dan coba lagi.';
+  document.getElementById('ovI').textContent = ok ? 'OK' : 'X';
+  document.getElementById('ovT').textContent = ok ? 'Temuan Ditutup!' : 'Gagal Menyimpan';
+  document.getElementById('ovT').className = 'ov-title ' + (ok ? 'ok' : 'err');
+  document.getElementById('ovM').textContent = ok
+    ? (selectedTemuan ? selectedTemuan.temuan_id : '') + ' berhasil di-close.\nStatus diubah ke Closed.'
+    : 'Cek koneksi internet dan coba lagi.';
   document.getElementById('ov').classList.add('show');
 }
 
 function resetForm(){
   document.getElementById('ov').classList.remove('show');
-  document.querySelectorAll('input[type=text],textarea').forEach(el=>el.value='');
-  document.querySelectorAll('select').forEach(el=>el.selectedIndex=0);
-  document.getElementById('subAreaPIC').innerHTML='<option value=""> -  Pilih Sub Area  - </option>';
-  document.getElementById('tglClose').value=new Date().toISOString().split('T')[0];
-  document.getElementById('secTemuan').style.display='none';
-  document.getElementById('secTindakan').style.display='none';
-  document.getElementById('detailField').style.display='none';
-  document.getElementById('fotoPreviewClose').innerHTML='';
-  document.getElementById('fotoStatusClose').textContent='';
-  fotoFilesClose=[];selectedTemuan=null;
+  var texts = document.querySelectorAll('input[type=text],textarea');
+  for (var i = 0; i < texts.length; i++) texts[i].value = '';
+  document.getElementById('tglClose').value = new Date().toISOString().split('T')[0];
+  document.getElementById('picSelect').selectedIndex = 0;
+  document.getElementById('hasilVerif').selectedIndex = 0;
+  document.getElementById('picInfo').classList.remove('show');
+  document.getElementById('secAset').style.display = 'none';
+  document.getElementById('secTemuan').style.display = 'none';
+  document.getElementById('secTindakan').style.display = 'none';
+  document.getElementById('detailField').style.display = 'none';
+  document.getElementById('fotoPreviewClose').innerHTML = '';
+  document.getElementById('fotoStatusClose').textContent = '';
+  fotoFilesClose = [];
+  selectedPic = null;
+  selectedTemuan = null;
   loadTemuan();
 }
 </script>
