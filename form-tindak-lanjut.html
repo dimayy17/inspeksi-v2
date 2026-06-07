@@ -256,6 +256,7 @@ var allTemuan = [];
 var selectedPic = null;
 var selectedTemuan = null;
 var fotoFilesClose = [];
+var isSubmitting = false;
 
 document.addEventListener('DOMContentLoaded', function(){
   document.getElementById('tglClose').value = new Date().toISOString().split('T')[0];
@@ -529,9 +530,8 @@ function submitClose(){
       .then(function(){ showOv(true); })
       .catch(function(){ showOv(false); });
 
-    btn.disabled = false;
     document.getElementById('sp').style.display = 'none';
-    document.getElementById('btnTxt').textContent = 'Close Temuan';
+    document.getElementById('btnTxt').textContent = 'Terkirim';
   });
 }
 
@@ -562,6 +562,9 @@ function resetForm(){
   fotoFilesClose = [];
   selectedPic = null;
   selectedTemuan = null;
+  isSubmitting = false;
+  document.getElementById('btnClose').disabled = false;
+  document.getElementById('btnTxt').textContent = 'Close Temuan';
   loadTemuan();
 }
 </script>
